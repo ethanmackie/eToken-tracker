@@ -20,6 +20,11 @@
 
 }
 
+
+a {
+  color:#fff;
+  text-decoration: none;
+}
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -346,11 +351,15 @@ header a:hover {
 #podium {
   display:flex;
   min-height:50vh;
+  max-width:1200px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 #podium .podium-rank {
   flex:1;
   text-align:center;
+  min-height:240px;
 }
 
 #podium .position-1 {
@@ -364,19 +373,33 @@ header a:hover {
 }
 
 #podium .position-1 .position {
+  font-size:50px;
+  margin:0.1em 0 0;
+}
+
+#podium .position-2 .position {
   font-size:40px;
-  margin:.25em 0 0;
+  margin:0.05em 0 0;
+}
+
+#podium .position-3 .position {
+  font-size:30px;
+  margin:0.2em 0 0;
 }
 
 #podium .podium-rank h4 {
   margin:.5em 0 0;
-  text-shadow:0 2px 3px rgba(0,0,0,0.3);
+  text-shadow:0 2px 3px rgba(0,0,0,0.5);
   letter-spacing:1px;
 }
 
+#podium .podium-rank h4 a, #podium .podium-rank h4 a:hover, #podium .podium-rank h4 a:visited, #podium .podium-rank h4 a:focus {
+  color:#fff;
+  text-decoration: none;
+}
 #podium .podium-rank h5 {
   margin:.5em 0;
-  text-shadow:0 2px 3px rgba(0,0,0,0.3);
+  text-shadow:0 2px 3px rgba(0,0,0,0.5);
   letter-spacing:1px;
 }
 
@@ -399,22 +422,60 @@ header a:hover {
   font-size:13px;
   text-shadow:none;
   letter-spacing:2px;
+  text-transform: uppercase;
 }
 
 #rankings .rank {
-  margin-top:200px;
   display:flex;
-  min-height:50vh;
 }
 
 #rankings .rank * {
   flex:1;
 }
+#rankings .rank a, #rankings .rank a:hover, #rankings .rank a:focus, #rankings .rank a:visited {
+  color:#fff;
+  text-decoration: none;
+}
+#rankings .rank .symbol {
+  background:#fff;
+  border-radius:3px;
+  padding:.2em .5em;
+  margin:0;
+  color:#3B4193;
+  display:inline-block;
+  font-size:13px;
+  text-shadow:none;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
 
+#rankings .rank .position span {
+  border:1px solid #fff;
+  border-radius:50%;
+  padding:0;
+  width:38px;
+  height:38px;
+  text-align:center;
+  display:inline-block;
+  line-height:2;
+}
+
+@media (max-width: 768px) { 
+  #podium {
+    min-height:0;
+  }
+}
 
 @media (max-width: 600px) {
-  #podium .podium-rank, #rankings .rank {
+  header {
+    padding-top:190px;
+  }
+  #podium, #rankings .rank {
     display: block;
+    text-align:center;
+  }
+  #rankings {
+    text-align:center;
   }
   #podium .position-1 {
     order:1;
@@ -428,10 +489,31 @@ header a:hover {
 }
 
 
+#rankings {
+  padding:1em; 
+  margin-bottom:2em;
+  max-width:1200px;
+  margin-left:auto;
+  margin-right:auto;
+}
+#rankings .rank {
+  padding:1em;
+}
+#rankings .rank:nth-child(odd) {
+  background:rgba(0,0,0,0.1);
+}
+#rankings .rank:nth-child(even) {
+  background:rgba(0,0,0,0.05);
+}
+
+footer {
+  padding:2em 1em;
+}
 footer a {
   color:#fff;
   display:block;
   font-size:13px;
+  margin:0 0 0.25em;
 
 }
 
@@ -491,8 +573,8 @@ footer .badger-button:hover, footer .badger-button:focus {
 .rank-2 .medal {
   float: none;
   margin: 15px auto;
-  width: 25px;
-  height: 25px;
+  width: 60px;
+  height: 60px;
   background: #b9b7b5 linear-gradient(45deg, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 50%);
   border: 1.66667px solid #fff;
   border-radius: 50%;
@@ -500,31 +582,32 @@ footer .badger-button:hover, footer .badger-button:focus {
 }
 .rank-2 .medal:before {
   content: "";
-  width: 10px;
-  height: 35.71429px;
+  width: 20px;
+  height: 55px;
   background: #654395;
   transform: rotate(15deg);
   position: absolute;
-  top: -35.71429px;
-  left: 15.625px;
+  top: -53px;
+  left: 33px;
   z-index: -1;
 }
 .rank-2 .medal:after {
   content: "";
-  width: 10px;
-  height: 35.71429px;
+  width: 20px;
+  height: 55px;
   background: #7e57b4;
   transform: rotate(-15deg);
   position: absolute;
-  top: -35.71429px;
+  top: -53px;
+  left:5px;
   z-index: -1;
 }
 
 .rank-3 .medal {
   float: none;
   margin: 30px auto;
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
   background: #d78c36 linear-gradient(45deg, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 50%);
   border: 1.33333px solid #fff;
   border-radius: 50%;
@@ -532,23 +615,24 @@ footer .badger-button:hover, footer .badger-button:focus {
 }
 .rank-3 .medal:before {
   content: "";
-  width: 8px;
-  height: 28.57143px;
+  width: 15px;
+  height: 43px;
   background: #434f95;
   transform: rotate(15deg);
   position: absolute;
-  top: -28.57143px;
-  left: 12.5px;
+  top: -40px;
+  left: 22px;
   z-index: -1;
 }
 .rank-3 .medal:after {
   content: "";
-  width: 8px;
-  height: 28.57143px;
+  width: 15px;
+  height: 43px;
   background: #5765b4;
   transform: rotate(-15deg);
   position: absolute;
-  top: -28.57143px;
+  top: -40px;
+  left:5px;
   z-index: -1;
 }
 

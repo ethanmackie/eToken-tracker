@@ -10,6 +10,11 @@
 //   });
 // });
 
+String.prototype.trunc = String.prototype.trunc ||
+function(n){
+    return (this.length > n) ? this.substr(0, n-1) + '&hellip;' : this;
+};
+
 
 // A comma separated list of currencies to display.
 var ticker_currencies = "USD,EUR,JPY,CNY"
@@ -52,13 +57,19 @@ ticker = function(currencies) {
           var txCount = this.transactionCount;
           var url = this.url;
 
+          if (name == '') {
+            name = tokenId.trunc(8);
+          }
+          if (symbol == '') { 
+            symbol = "n/a";
+          }
 
 
           // console.log('Rank: ' + index + ' / txCount: ' + txCount + ' / symbol: ' + symbol + ' / tokenID: ' + tokenId + ' / name: ' + name);
           if (index < 4) { 
-            output.push("<div class='podium-rank position-" + index + "'><div class='rank-" + index + "'><div class='medal'><h3 class='position'>" + index + "</h3></div><h4>" + name + "</h4><h5>" + txCount + " transactions</h5><h3 class='symbol'>" + symbol + "</h3></div></div>");
+            output.push("<div class='podium-rank position-" + index + "'><div class='rank-" + index + "'><div class='medal'><h3 class='position'>" + index + "</h3></div><h4><a href='https://explorer.bitcoin.com/bch/tx/" + tokenId + "'>" + name + "</a></h4><h5>" + txCount + " transactions</h5><h3 class='symbol'>" + symbol + "</h3></div></div>");
           } else {
-            rankings.push("<div class='rank rank-" + index + "'><h3 class='position'>" + index + "</h3><h4>" + name + "</h4><h3 class='symbol'>" + symbol + "</h3><h5>" + txCount + " transactions</h5></div>");
+            rankings.push("<div class='rank rank-" + index + "'><h3 class='position'><span>" + index + "</span></h3><h4><a href='https://explorer.bitcoin.com/bch/tx/" + tokenId + "'>" + name + "</a></h4><h3><span class='symbol'>" + symbol + "</span></h3><h5>" + txCount + " transactions</h5></div>");
           }
           // $.each(this, function (name, value) {
           //   // console.log(name + '=' + value);
