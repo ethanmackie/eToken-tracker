@@ -625,7 +625,7 @@ footer .badger-button:hover, footer .badger-button:focus {
   transform: rotate(15deg);
   position: absolute;
   top: -40px;
-  left: 22px;
+  left: 25px;
   z-index: -1;
 }
 .rank-3 .medal:after {
