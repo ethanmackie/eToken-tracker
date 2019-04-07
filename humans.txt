@@ -1,0 +1,17 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Corbin -- Dev -- @maplesyrupsucker
+
+# THANKS
+
+  https://www.behance.net/gallery/58852705/Flat-Space-Background-Free-JPG-PSD*/
+  https://codepen.io/Mobilpadde/pen/jakfi*/
+
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    SLPDB, jQuery, Modernizr, Normalize.css
