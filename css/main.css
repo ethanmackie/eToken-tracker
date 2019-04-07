@@ -432,6 +432,10 @@ header a:hover {
 #rankings .rank * {
   flex:1;
 }
+
+#rankings .rank h4 {
+  padding:1em 1.5em;
+}
 #rankings .rank a, #rankings .rank a:hover, #rankings .rank a:focus, #rankings .rank a:visited {
   color:#fff;
   text-decoration: none;

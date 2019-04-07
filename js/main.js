@@ -4,8 +4,6 @@ function(n){
 };
 
 
-// A comma separated list of currencies to display.
-
 tokens = function(currencies) {
 
   $.ajax({
