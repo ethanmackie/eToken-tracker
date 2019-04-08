@@ -389,8 +389,13 @@ header a:hover {
 
 #podium .podium-rank h4 {
   margin:.5em 0 0;
-  text-shadow:0 2px 3px rgba(0,0,0,0.5);
-  letter-spacing:1px;
+  letter-spacing:2px;
+  text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191;
+  font-size:22px;
+  text-transform: uppercase;
+
 }
 
 #podium .podium-rank h4 a, #podium .podium-rank h4 a:hover, #podium .podium-rank h4 a:visited, #podium .podium-rank h4 a:focus {
@@ -399,8 +404,11 @@ header a:hover {
 }
 #podium .podium-rank h5 {
   margin:.5em 0;
-  text-shadow:0 2px 3px rgba(0,0,0,0.5);
-  letter-spacing:1px;
+  text-shadow: 1px 1px 1px #888,
+        1px 2px 1px #888,
+        1px 3px 1px #888;
+  letter-spacing:2px;
+  font-size:16px;
 }
 
 #podium .podium-rank .medal {
