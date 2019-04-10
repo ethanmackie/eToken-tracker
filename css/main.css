@@ -304,7 +304,16 @@ textarea {
 
 /*credit: https://www.behance.net/gallery/58852705/Flat-Space-Background-Free-JPG-PSD*/
 
-
+#ajax-loader {
+  background:transparent url('../img/ajax-loader.gif') no-repeat center center;
+  width:100px;
+  height:100px;
+  position:absolute;
+  z-index:999;
+  left:50%;
+  margin-left:-50px;
+  top:400px;
+}
 body {
   background:#3A3E95 url('../img/flat-space-background.jpg') no-repeat top center;
   background-size:100%;
@@ -390,23 +399,26 @@ header a:hover {
 #podium .podium-rank h4 {
   margin:.5em 0 0;
   letter-spacing:2px;
-  text-shadow: 1px 1px 1px #919191,
-        1px 2px 1px #919191,
-        1px 3px 1px #919191;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.4),
+        1px 2px 1px rgba(0,0,0,0.4),
+        1px 3px 1px rgba(0,0,0,0.4);
   font-size:22px;
   text-transform: uppercase;
 
 }
 
-#podium .podium-rank h4 a, #podium .podium-rank h4 a:hover, #podium .podium-rank h4 a:visited, #podium .podium-rank h4 a:focus {
+#podium .podium-rank h4 a, #podium .podium-rank h4 a:visited, #podium .podium-rank h4 a:focus {
   color:#fff;
   text-decoration: none;
 }
+#podium .podium-rank h4 a:hover {
+  color:#FC9B76;
+}
 #podium .podium-rank h5 {
   margin:.5em 0;
-  text-shadow: 1px 1px 1px #888,
-        1px 2px 1px #888,
-        1px 3px 1px #888;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.4),
+        1px 2px 1px rgba(0,0,0,0.4),
+        1px 3px 1px rgba(0,0,0,0.4);
   letter-spacing:2px;
   font-size:16px;
 }
@@ -442,11 +454,14 @@ header a:hover {
 }
 
 #rankings .rank h4 {
-  padding:1em 1.5em;
+  padding:0 1.5em;
 }
-#rankings .rank a, #rankings .rank a:hover, #rankings .rank a:focus, #rankings .rank a:visited {
+#rankings .rank a {
   color:#fff;
   text-decoration: none;
+}
+#rankings .rank a:hover, #rankings .rank a:focus, #rankings .rank a:visited {
+  color:#779BEF;
 }
 #rankings .rank .symbol {
   background:#fff;
@@ -479,6 +494,9 @@ header a:hover {
 }
 
 @media (max-width: 600px) {
+  #ajax-loader {
+    top:70px;
+  }
   header {
     padding-top:190px;
   }
