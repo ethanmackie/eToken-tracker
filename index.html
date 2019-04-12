@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Token Podium – Bitcoin Cash (BCH) Token Standings</title>
-  <meta name="description" content="Discover the Top 100 Bitcoin Cash SLP Tokens receiving the most activity. Tokens are on Bitcoin Cash! Mint yours today and compete for the Token Podium.">
+  <meta name="description" content="Discover the Top 100 Bitcoin Cash SLP Tokens receiving the most transactions and most addresses. Tokens are on Bitcoin Cash! Mint yours today and compete for the Token Podium.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="manifest" href="site.webmanifest">
@@ -31,11 +31,24 @@
   </header>
   
   <div id="ajax-loader"></div>
-  <div id="podium"></div>
-  <div id="rankings"></div>
+
+  <ul class="tabs">
+    <li class="tab-link current" data-tab="tab-mostTx">Most Transactions</li>
+    <li class="tab-link" data-tab="tab-mostAddr">Most Addresses</li>
+  </ul>
+
+<div id="tab-mostTx" class="tab-content current">
+  <h1 class="ribbon-title--a">Top Simple Tokens <span>with Most Transactions</span></h1>
+  <div class="podium"></div>
+  <div class="rankings"></div> 
+</div>
+<div id="tab-mostAddr" class="tab-content">
+  <h1 class="ribbon-title--a">Top Simple Tokens <span>with Most Addresses</span></h1>
+   <div class="podium"></div>
+   <div class="rankings"></div>
+</div>
 
   <footer>
-    
 
     <script src="https://paybutton.cash/pre-release/v0.1/js/paybutton.min.js"></script>
     <button class="pay-button" address="bitcoincash:qzqt0lmfz6k4l24qrl6jamhnxu5feav6hyh0alk2ys"
