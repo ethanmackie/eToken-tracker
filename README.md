@@ -5,14 +5,6 @@ View SLP Simple Tokens with the most activity. Visit http://podium.cash
 
 Corbin -- Dev -- @maplesyrupsuckr (on twitter)
 
-# THANKS
-
-#### Background Image: 
-  https://www.behance.net/gallery/58852705/Flat-Space-Background-Free-JPG-PSD*/
-  
-#### CSS Medal: 
-  https://codepen.io/Mobilpadde/pen/jakfi*/
- 
  
 # SLPDB
 

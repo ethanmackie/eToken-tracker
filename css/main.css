@@ -319,7 +319,7 @@ body {
   background-size:100%;
 }
 header {
-  padding:6em 1em;
+  padding:6em 1em 0;
 }
 
 header .logo {
@@ -359,7 +359,18 @@ header a:hover {
   text-decoration: underline;
 }
 
-header button {
+ul.tabs{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-align:center;
+  margin-bottom:3em;
+}
+ul.tabs li{
+  background: none;
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
   background:transparent;
   border:2px solid #fff;
   border-radius:30px;
@@ -373,11 +384,67 @@ header button {
   text-shadow: 1px 1px 5px rgba(0,0,0,0.12),
         1px 2px 5px rgba(0,0,0,0.12),
         1px 3px 5px rgba(0,0,0,0.12);
+
 }
 
-header button.active {
+ul.tabs li.current{
   color:#e48267;
   border-color:#e48267;
+}
+
+.tab-content{
+  display: none;
+}
+
+.tab-content.current{
+  display: inherit;
+}
+
+
+.ribbon-title--a {
+  /* Calc */
+  /* Props */
+  background-color: #3b3e95;
+  color: #fff;
+  display: block;
+  -webkit-filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+  font-size: 25px;
+  line-height: 1;
+  margin: 20px auto 3em;
+  max-width: 70%;
+  padding: 15px 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  width: 496px;
+  transition: all 300ms;
+  position:relative;
+  z-index:-1;
+}
+.ribbon-title--a span {
+  display:block;
+  font-size:15px;
+  margin-top:6px;
+}
+.ribbon-title--a::before, .ribbon-title--a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  border: 38px solid #3b3e95;
+  z-index: -1;
+}
+.ribbon-title--a::before {
+  left: -8px;
+  border-left: 8px solid transparent;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.ribbon-title--a::after {
+  right: -8px;
+  border-right: 8px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 .podium {
@@ -422,9 +489,9 @@ header button.active {
 .podium .podium-rank h4 {
   margin:.5em 0 0;
   letter-spacing:2px;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.4),
-        1px 2px 1px rgba(0,0,0,0.4),
-        1px 3px 1px rgba(0,0,0,0.4);
+  text-shadow: 1px 1px 9px rgba(0,0,0,0.4),
+        1px 2px 9px rgba(0,0,0,0.2),
+        1px 3px 9px rgba(0,0,0,0.1);
   font-size:22px;
   text-transform: uppercase;
 
@@ -439,9 +506,9 @@ header button.active {
 }
 .podium .podium-rank h5 {
   margin:.5em 0;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.4),
-        1px 2px 1px rgba(0,0,0,0.4),
-        1px 3px 1px rgba(0,0,0,0.4);
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.4),
+        1px 2px 6px rgba(0,0,0,0.2),
+        1px 3px 6px rgba(0,0,0,0.1);
   letter-spacing:2px;
   font-size:16px;
 }
@@ -517,11 +584,15 @@ header button.active {
 }
 
 @media (max-width: 600px) {
+  .ribbon-title--a  {display:none;}
   #ajax-loader {
     top:70px;
   }
   header {
     padding-top:190px;
+  }
+  ul.tabs {
+    margin-bottom:6em;
   }
   .podium, .rankings .rank {
     display: block;

@@ -5,10 +5,20 @@
 
     Corbin -- Dev -- @maplesyrupsuckr
 
+
 # THANKS
 
+#### Background Image: 
   https://www.behance.net/gallery/58852705/Flat-Space-Background-Free-JPG-PSD*/
+  
+#### CSS Medal: 
   https://codepen.io/Mobilpadde/pen/jakfi*/
+
+#### tabs
+https://codepen.io/cssjockey/pen/jGzuK
+
+#### Ribbons: 
+https://codepen.io/saulopaiva/pen/wNMGNe?&page=1
 
 
 # TECHNOLOGY COLOPHON
