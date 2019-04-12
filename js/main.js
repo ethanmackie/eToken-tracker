@@ -10,8 +10,8 @@ tokens = function(currencies) {
     contentType: "application/json; charset=utf-8",
     timeout: 6000,
     error: function (x, t, m) {
-      if ($('#podium').html() === '') {
-        $("#podium").html("<div class='currency'><h4>Error retrieving token count</h4></div>");
+      if ($('.podium').html() === '') {
+        $(".podium").html("<div class='currency'><h4>Error retrieving token count</h4></div>");
       }
     },
     complete: function () { 
@@ -51,8 +51,8 @@ tokens = function(currencies) {
         });
       });
 
-      $('#podium').html(output);
-      $('#rankings').html(rankings)
+      $('.podium').html(output);
+      $('.rankings').html(rankings)
 
     }
   }).done(function () {

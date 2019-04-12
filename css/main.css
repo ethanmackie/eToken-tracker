@@ -351,13 +351,36 @@ header a {
   letter-spacing:1px;
   text-decoration: none;
   font-style:italic;
+  display:block;
+  margin-bottom:10px;
 }
 
 header a:hover {
   text-decoration: underline;
 }
 
-#podium {
+header button {
+  background:transparent;
+  border:2px solid #fff;
+  border-radius:30px;
+  padding:8px 15px;
+  color:#fff;
+  font-weight:bold;
+  letter-spacing: 1px;
+  cursor:pointer;
+  margin:2px 5px;
+  font-size:13px;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.12),
+        1px 2px 5px rgba(0,0,0,0.12),
+        1px 3px 5px rgba(0,0,0,0.12);
+}
+
+header button.active {
+  color:#e48267;
+  border-color:#e48267;
+}
+
+.podium {
   display:flex;
   min-height:50vh;
   max-width:1200px;
@@ -365,38 +388,38 @@ header a:hover {
   margin-right:auto;
 }
 
-#podium .podium-rank {
+.podium .podium-rank {
   flex:1;
   text-align:center;
   min-height:240px;
 }
 
-#podium .position-1 {
+.podium .position-1 {
   order:2;
 }
-#podium .position-2 {
+.podium .position-2 {
   order:1;
 }
-#podium .position-3 {
+.podium .position-3 {
   order:3;
 }
 
-#podium .position-1 .position {
+.podium .position-1 .position {
   font-size:50px;
   margin:0.1em 0 0;
 }
 
-#podium .position-2 .position {
+.podium .position-2 .position {
   font-size:40px;
   margin:0.05em 0 0;
 }
 
-#podium .position-3 .position {
+.podium .position-3 .position {
   font-size:30px;
   margin:0.2em 0 0;
 }
 
-#podium .podium-rank h4 {
+.podium .podium-rank h4 {
   margin:.5em 0 0;
   letter-spacing:2px;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.4),
@@ -407,14 +430,14 @@ header a:hover {
 
 }
 
-#podium .podium-rank h4 a, #podium .podium-rank h4 a:visited, #podium .podium-rank h4 a:focus {
+.podium .podium-rank h4 a, .podium .podium-rank h4 a:visited, .podium .podium-rank h4 a:focus {
   color:#fff;
   text-decoration: none;
 }
-#podium .podium-rank h4 a:hover {
+.podium .podium-rank h4 a:hover {
   color:#FC9B76;
 }
-#podium .podium-rank h5 {
+.podium .podium-rank h5 {
   margin:.5em 0;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.4),
         1px 2px 1px rgba(0,0,0,0.4),
@@ -423,16 +446,16 @@ header a:hover {
   font-size:16px;
 }
 
-#podium .podium-rank .medal {
+.podium .podium-rank .medal {
   text-align:left;
   flex:none;
 }
 
-#podium .position {
+.podium .position {
   text-align:center;
 }
 
-#podium .symbol {
+.podium .symbol {
   background:#fff;
   border-radius:3px;
   padding:.2em .5em;
@@ -445,25 +468,25 @@ header a:hover {
   text-transform: uppercase;
 }
 
-#rankings .rank {
+.rankings .rank {
   display:flex;
 }
 
-#rankings .rank * {
+.rankings .rank * {
   flex:1;
 }
 
-#rankings .rank h4 {
+.rankings .rank h4 {
   padding:0 1.5em;
 }
-#rankings .rank a {
+.rankings .rank a {
   color:#fff;
   text-decoration: none;
 }
-#rankings .rank a:hover, #rankings .rank a:focus, #rankings .rank a:visited {
+.rankings .rank a:hover, .rankings .rank a:focus, .rankings .rank a:visited {
   color:#779BEF;
 }
-#rankings .rank .symbol {
+.rankings .rank .symbol {
   background:#fff;
   border-radius:3px;
   padding:.2em .5em;
@@ -476,7 +499,7 @@ header a:hover {
   text-transform:uppercase;
 }
 
-#rankings .rank .position span {
+.rankings .rank .position span {
   border:1px solid #fff;
   border-radius:50%;
   padding:0;
@@ -488,7 +511,7 @@ header a:hover {
 }
 
 @media (max-width: 768px) { 
-  #podium {
+  .podium {
     min-height:0;
   }
 }
@@ -500,39 +523,39 @@ header a:hover {
   header {
     padding-top:190px;
   }
-  #podium, #rankings .rank {
+  .podium, .rankings .rank {
     display: block;
     text-align:center;
   }
-  #rankings {
+  .rankings {
     text-align:center;
   }
-  #podium .position-1 {
+  .podium .position-1 {
     order:1;
   }
-  #podium .position-2 {
+  .podium .position-2 {
     order:2;
   }
-  #podium .position-3 {
+  .podium .position-3 {
     order:3;
   }
 }
 
 
-#rankings {
+.rankings {
   padding:1em; 
   margin-bottom:2em;
   max-width:1200px;
   margin-left:auto;
   margin-right:auto;
 }
-#rankings .rank {
+.rankings .rank {
   padding:1em;
 }
-#rankings .rank:nth-child(odd) {
+.rankings .rank:nth-child(odd) {
   background:rgba(0,0,0,0.1);
 }
-#rankings .rank:nth-child(even) {
+.rankings .rank:nth-child(even) {
   background:rgba(0,0,0,0.05);
 }
 

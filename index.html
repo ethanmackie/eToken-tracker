@@ -28,11 +28,23 @@
     <h1>Simple Token Podium</h1>
     <p>Discover the Top 100 Bitcoin Cash SLP Tokens receiving the most activity.</p> 
     <a href="https://simpleledger.cash/" title="Simple Ledger Protocol">What is a Simple Token (SLP)?</a>
+    <button class="switchTab active" onclick="">
+      Most Transactions
+    </button>
+    <button class="switchTab" onclick="">
+      Most Addresses
+    </button>
   </header>
   
   <div id="ajax-loader"></div>
-  <div id="podium"></div>
-  <div id="rankings"></div>
+  <div id="mostTx">
+    <div class="podium"></div>
+    <div class="rankings"></div>
+  </div>
+  <div id="mostAddr">
+    <div class="podium"></div>
+    <div class="rankings"></div>
+  </div>
 
   <footer>
     
