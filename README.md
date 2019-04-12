@@ -3,7 +3,7 @@ View SLP Simple Tokens with the most activity. Visit http://podium.cash
 
 # TEAM
 
-Corbin -- Dev -- @maplesyrupsuckr
+Corbin -- Dev -- @maplesyrupsuckr (on twitter)
 
 # THANKS
 
