@@ -319,7 +319,7 @@ body {
   background-size:100%;
 }
 header {
-  padding:6em 1em 0;
+  padding:2em 1em 0;
 }
 
 header .logo {
@@ -364,7 +364,8 @@ ul.tabs{
   padding: 0px;
   list-style: none;
   text-align:center;
-  margin-bottom:3em;
+  margin-top:1em;
+  margin-bottom:1em;
 }
 ul.tabs li{
   background: none;
@@ -411,7 +412,7 @@ ul.tabs li.current{
           filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
   font-size: 25px;
   line-height: 1;
-  margin: 20px auto 3em;
+  margin: 20px auto 2em;
   max-width: 70%;
   padding: 15px 0;
   position: relative;
