@@ -503,7 +503,7 @@ ul.tabs li.current{
   text-decoration: none;
 }
 .podium .podium-rank h4 a:hover {
-  color:#FC9B76;
+  color:#60BC70;
 }
 .podium .podium-rank h5 {
   margin:.5em 0;
@@ -544,6 +544,11 @@ ul.tabs li.current{
   flex:1;
 }
 
+.rankings .rank h3.position {
+  width:100px;
+  flex:none;
+}
+
 .rankings .rank h4 {
   padding:0 1.5em;
 }
@@ -551,7 +556,7 @@ ul.tabs li.current{
   color:#fff;
   text-decoration: none;
 }
-.rankings .rank a:hover, .rankings .rank a:focus, .rankings .rank a:visited {
+.rankings .rank a:hover, .rankings .rank a:focus {
   color:#779BEF;
 }
 .rankings .rank .symbol {
@@ -579,6 +584,10 @@ ul.tabs li.current{
 }
 
 @media (max-width: 768px) { 
+  .rankings .rank h3.position {
+    flex:auto;
+    width:100%;
+  }
   .podium {
     min-height:0;
   }
@@ -637,9 +646,12 @@ footer {
 footer a {
   color:#fff;
   display:block;
-  font-size:13px;
-  margin:0.25em 0 0.25em;
+  margin:0.35em 0 0.35em;
 
+}
+
+footer a.alt {
+  color:#60BC70;
 }
 
 footer .badger-button {
@@ -759,4 +771,18 @@ footer .badger-button:hover, footer .badger-button:focus {
   top: -40px;
   left:5px;
   z-index: -1;
+}
+
+
+.icon {
+  width:32px;
+  height:32px;
+  background:#fff;
+  padding:2px;
+  border-radius:50%;
+  margin:0 8px;
+  opacity:0;
+  color:transparent;
+  text-indent:-9999px
+
 }
