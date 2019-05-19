@@ -17,6 +17,12 @@ $(document).ready(function(){
 
 });
 
+function imgError(image) {
+    image.onerror = "";
+    image.src = "img/icon/slp.png";
+    return true;
+}
+
 tokens = function(currencies) {
   $.ajax({
     type: "GET",
@@ -54,11 +60,14 @@ tokens = function(currencies) {
           if (symbol == '') { 
             symbol = "n/a";
           }
+          
+          icon = "<img src='img/icon/" + tokenId + ".png' class='icon' onerror='imgError(this);' style='opacity:1;'>";
+
 
           if (index < 4) { 
-            output.push("<div class='podium-rank position-" + index + "'><div class='rank-" + index + "'><div class='medal'><h3 class='position'>" + index + "</h3></div><h4><a href='https://explorer.bitcoin.com/bch/tx/" + tokenId + "'>" + name + "</a></h4><h5>" + txCount + " transactions</h5><h3 class='symbol'>" + symbol + "</h3></div></div>");
+            output.push("<div class='podium-rank position-" + index + "'><div class='rank-" + index + "'><div class='medal'><h3 class='position'>" + index + "</h3></div><h4><a href='https://explorer.bitcoin.com/bch/tx/" + tokenId + "'>" + icon + name + "</a></h4><h5>" + txCount + " transactions</h5><h3 class='symbol'>" + symbol + "</h3></div></div>");
           } else {
-            rankings.push("<div class='rank rank-" + index + "'><h3 class='position'><span>" + index + "</span></h3><h4><a href='https://explorer.bitcoin.com/bch/tx/" + tokenId + "'>" + name + "</a></h4><h3><span class='symbol'>" + symbol + "</span></h3><h5>" + txCount + " transactions</h5></div>");
+            rankings.push("<div class='rank rank-" + index + "'><h3 class='position'><span>" + index + "</span></h3><h4><a href='https://explorer.bitcoin.com/bch/tx/" + tokenId + "'>" + icon + name + "</a></h4><h3><span class='symbol'>" + symbol + "</span></h3><h5>" + txCount + " transactions</h5></div>");
           }
           // console.log('Poked slpDB for the goods')
           
@@ -115,10 +124,12 @@ tokensAddr = function(currencies) {
             symbol = "n/a";
           }
 
+          icon = "<img src='img/icon/" + tokenId + ".png' class='icon' onerror='imgError(this);' style='opacity:1;'>";
+
           if (index < 4) { 
-            output.push("<div class='podium-rank position-" + index + "'><div class='rank-" + index + "'><div class='medal'><h3 class='position'>" + index + "</h3></div><h4><a href='https://explorer.bitcoin.com/bch/tx/" + tokenId + "'>" + name + "</a></h4><h5>" + txCount + " addresses</h5><h3 class='symbol'>" + symbol + "</h3></div></div>");
+            output.push("<div class='podium-rank position-" + index + "'><div class='rank-" + index + "'><div class='medal'><h3 class='position'>" + index + "</h3></div><h4><a href='https://explorer.bitcoin.com/bch/tx/" + tokenId + "'>" + icon + name + "</a></h4><h5>" + txCount + " addresses</h5><h3 class='symbol'>" + symbol + "</h3></div></div>");
           } else {
-            rankings.push("<div class='rank rank-" + index + "'><h3 class='position'><span>" + index + "</span></h3><h4><a href='https://explorer.bitcoin.com/bch/tx/" + tokenId + "'>" + name + "</a></h4><h3><span class='symbol'>" + symbol + "</span></h3><h5>" + txCount + " addresses</h5></div>");
+            rankings.push("<div class='rank rank-" + index + "'><h3 class='position'><span>" + index + "</span></h3><h4><a href='https://explorer.bitcoin.com/bch/tx/" + tokenId + "'>" + icon + name + "</a></h4><h3><span class='symbol'>" + symbol + "</span></h3><h5>" + txCount + " addresses</h5></div>");
           }
           // console.log('Poked slpDB for the most addr goods')
           
