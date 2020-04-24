@@ -61,8 +61,7 @@ tokens = function(currencies) {
             symbol = "n/a";
           }
           
-          icon = "<img src='img/icon/" + tokenId + ".png' class='icon' onerror='imgError(this);' style='opacity:1;'>";
-
+          icon = "<img src='https://tokens.bch.sx/64/" + tokenId + ".png' class='icon' onerror='imgError(this);' style='opacity:1;'>";
 
           if (index < 4) { 
             output.push("<div class='podium-rank position-" + index + "'><div class='rank-" + index + "'><div class='medal'><h3 class='position'>" + index + "</h3></div><h4><a href='https://explorer.bitcoin.com/bch/tx/" + tokenId + "'>" + icon + name + "</a></h4><h5>" + txCount + " transactions</h5><h3 class='symbol'>" + symbol + "</h3></div></div>");
