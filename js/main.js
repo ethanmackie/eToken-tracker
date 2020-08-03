@@ -31,7 +31,7 @@ tokens = function(currencies) {
     timeout: 6000,
     error: function (x, t, m) {
       if ($('#tab-mostTx .podium').html() === '') {
-        $("#tab-mostTx .podium").html("<div class='currency'><h4>Error retrieving token count</h4></div>");
+        $("#tab-mostTx .podium").html("<div class='currency' style='text-align:center'><h4>⚠️ Error retrieving token count</h4></div>");
       }
     },
     complete: function () { 
