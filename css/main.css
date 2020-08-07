@@ -586,10 +586,14 @@ ul.tabs li.current{
 @media (max-width: 768px) { 
   .rankings .rank h3.position {
     flex:auto;
-    width:100%;
+    width:0;
+    position:absolute;
   }
   .podium {
     min-height:0;
+  }
+  .rankings .rank h4 {
+      padding: 0 1.5em 0 4em;
   }
 }
 
@@ -597,6 +601,14 @@ ul.tabs li.current{
   .ribbon-title--a  {display:none;}
   #ajax-loader {
     top:70px;
+  }
+  .rankings .rank h4 {
+      padding: 0 1.5em 0 1.5em;
+  }
+  .rankings .rank h3.position {
+    flex:auto;
+    width:100%;
+    position:relative;
   }
   header {
     padding-top:190px;
