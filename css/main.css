@@ -221,7 +221,6 @@ textarea {
        (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
-
  
 /* ==========================================================================
    Print styles.
@@ -315,7 +314,7 @@ textarea {
   top:400px;
 }
 body {
-  background:#3A3E95 url('../img/flat-space-background.jpg') no-repeat top center;
+  background:#29007a url('../img/synthbg.jpg') no-repeat top center;
   background-size:100%;
 }
 header {
@@ -401,11 +400,10 @@ ul.tabs li.current{
   display: inherit;
 }
 
-
 .ribbon-title--a {
   /* Calc */
   /* Props */
-  background-color: #3b3e95;
+  background-color: #1f0049;
   color: #fff;
   display: block;
   -webkit-filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
@@ -432,7 +430,7 @@ ul.tabs li.current{
   content: '';
   position: absolute;
   top: 0;
-  border: 38px solid #3b3e95;
+  border: 18px solid #1f0049;
   z-index: -1;
 }
 .ribbon-title--a::before {
@@ -796,5 +794,4 @@ footer .badger-button:hover, footer .badger-button:focus {
   opacity:0;
   color:transparent;
   text-indent:-9999px
-
 }
