@@ -1,11 +1,6 @@
 # eToken Explorer
-View eTokens with the most transactional activities. Visit http://TODO
+View eTokens with the most transactional activities. Visit https://ethanmackie.github.io/eToken-tracker/
 
-# TEAM
-
-Corbin -- Dev -- @maplesyrupsuckr (on twitter)
-
- 
 # TokenDB
 
 View https://github.com/simpleledger/SLPDB for more inforomation on SLPDB 
