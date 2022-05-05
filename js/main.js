@@ -50,7 +50,8 @@ tokens = function(currencies) {
           if (index > 100) {
               return false;
           }
-
+          
+          var tokenIconsUrl = 'https://etoken-icons.s3.us-west-2.amazonaws.com';
           var symbol = '';
           var tokenId = '';
           var name = '';
@@ -73,7 +74,7 @@ tokens = function(currencies) {
                   symbol = "n/a";
                 }
                 
-                icon = "<img src='img/icon/ecash-icon.png' class='icon' onerror='imgError(this);' style='opacity:1;'>";
+                icon = `<img src=${tokenIconsUrl}/32/${tokenId}.png` + " class='icon' onerror='imgError(this);' style='opacity:1;'>";
                 if (index < 4) { 
                   output.push("<div class='podium-rank position-" + index + "'><div class='rank-" + index + "'><div class='medal'><h3 class='position'>" + index + "</h3></div><h4><a href='https://explorer.be.cash/tx/" + tokenId + "' target='_blank'>" + icon + name + "</a></h4><h5>" + txCount.toLocaleString('en') + " transactions</h5><h3 class='symbol'>" + symbol + "</h3></div></div>");
                 } else {
